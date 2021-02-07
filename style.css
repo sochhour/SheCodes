@@ -1,3 +1,7 @@
+body {
+  background-image: url("background.jpg");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -154,7 +158,7 @@
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: rgb(247, 200, 147); /* Black */
+  background-color: rgb(215, 235, 228); /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 }
@@ -179,4 +183,17 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+img {
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 250px;
+}
+
+.mid {
+  padding: 200px 500px;
+  color: black;
+  font-size: 30px;
 }
