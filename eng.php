@@ -1,4 +1,4 @@
-
+session_start();
 
 <!-- Side navigation -->
 <div class="sidenav">
@@ -10,20 +10,18 @@
   <a href="math.php">Mathematics</a>
 </div>
 
-
 <?php
- /*
+ 
  
 if(isset($_GET['logout'])){    
      
     //Simple exit message
     $logout_message = "<div class='msgln'><span class='left-info'>User <b class='user-name-left'>". $_SESSION['name'] ."</b> has left the chat session.</span><br></div>";
-    file_put_contents("log.html", $logout_message, FILE_APPEND | LOCK_EX);
+    file_put_contents("eng.html", $logout_message, FILE_APPEND | LOCK_EX);
      
     session_destroy();
     header("Location: index.php"); //Redirect the user
 }
- 
 
 if(isset($_POST['enter'])){
     if($_POST['name'] != ""){
@@ -38,7 +36,7 @@ function loginForm(){
     echo
     '<div id="loginform">
     <p>Please enter your name to continue!</p>
-    <form action="index.php" method="post">
+    <form action="eng.php" method="post">
       <label for="name">Name &mdash;</label>
       <input type="text" name="name" id="name" />
       <input type="submit" name="enter" id="enter" value="Enter" />
@@ -50,7 +48,7 @@ function loginForm(){
  
 <!DOCTYPE html>
 <html lang="en">
-    <head>   
+    <head>
         <meta charset="utf-8" />
  
         <title>Tuts+ Chat Application</title>
@@ -66,14 +64,14 @@ function loginForm(){
     ?>
         <div id="wrapper">
             <div id="menu">
-                <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p>
+                <p class="welcome">Let's read English! <b><?php echo $_SESSION['name']; ?></b></p>
                 <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
             </div>
  
             <div id="chatbox">
             <?php
-            if(file_exists("log.html") && filesize("log.html") > 0){
-                $contents = file_get_contents("log.html");          
+            if(file_exists("eng.html") && filesize("eng.html") > 0){
+                $contents = file_get_contents("eng.html");          
                 echo $contents;
             }
             ?>
@@ -90,7 +88,7 @@ function loginForm(){
             $(document).ready(function () {
                 $("#submitmsg").click(function () {
                     var clientmsg = $("#usermsg").val();
-                    $.post("post.php", { text: clientmsg });
+                    $.post("engpost.php", { text: clientmsg });
                     $("#usermsg").val("");
                     return false;
                 });
@@ -99,7 +97,7 @@ function loginForm(){
                     var oldscrollHeight = $("#chatbox")[0].scrollHeight - 20; //Scroll height before the request
  
                     $.ajax({
-                        url: "log.html",
+                        url: "eng.html",
                         cache: false,
                         success: function (html) {
                             $("#chatbox").html(html); //Insert chat log into the #chatbox div
@@ -128,4 +126,3 @@ function loginForm(){
 <?php
 }
 ?>
-*/
