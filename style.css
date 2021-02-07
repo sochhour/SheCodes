@@ -84,12 +84,13 @@
    
   #submitmsg,
   #enter{
-    background: #ff9800;
+    background: #f59841;
     border: 2px solid #e65100;
     color: white;
-    padding: 4px 10px;
+    padding: 5px 15px;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 15px;
   }
    
   .error {
@@ -138,5 +139,44 @@
   }
    
   .msgln b.user-name-left {
-    background: orangered;
+    background: rgb(241, 139, 102);
   }
+
+
+
+
+
+  /* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 250px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgb(247, 200, 147); /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #0c0000;
+  display: block;
+  text-align: center;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
