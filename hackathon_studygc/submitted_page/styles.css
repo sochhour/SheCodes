@@ -20,7 +20,8 @@
 }
 
 .loginform{
-    background: transparent; 
+    background: rgba(150, 103, 103, 0.6);
+    backdrop-filter: blur (20px); 
     position: absolute;
     top: 50%;
     left:50%;
@@ -29,71 +30,20 @@
     width: 100%;
     height: auto;
     border-radius: 5px;
-    padding: 40px 30px 40px 0;
+    padding: 50px 50px 40px 60px;
     box-shadow: 0 0 50px #1c1447;
 }
 
-.loginform .title{
-    font-size: 32px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: rosybrown;
-    margin-left: 23px;
-    margin-bottom: 35px;
-    letter-spacing: 4px;
-}
-
-.input-form{
-    margin-bottom: 35px;
-    position: relative;
-
-}
-
-.input-form .input{
-    width: 100%;
-    padding: 16px;
-    padding-left: 80px;
-    font-size: 18px;
-    text-align: center;
-    border: transparent;
-    color: #fff;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background: rgb(134, 44, 44);
-    box-shadow: inset 0 0 5px rgb(134, 44, 44);
-    outline: none;
-}
-
-.input-form:before{
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 100%;
-    background: wheat;
-}
-
-.input-form:after{
-    content: "";
-    position: absolute;
-    top: 6px;
-    left: 70px;
-    width: 1px;
-    height: 80%;
-    background: rgb(158, 59, 59);
-}
-
 .btn{
-    width: 300px;
+    width: 250px;
     height: 40px;
     background: wheat;
-    margin: 0 40px; /*distance from the text right side*/
-    margin-bottom: 10px;
+    margin: 0 auto; /*distance from the text right side*/
+    margin-right: 50px;
+    margin-bottom: 30px;
     text-align: center;
     border-radius: 5px;
-    padding: 8px;
+    padding: 7px;
     box-shadow: 0 2px 2px;
     color: rgb(139, 66, 66);
     text-transform:  uppercase;
@@ -103,12 +53,6 @@
     cursor: pointer;
 }
 
-.btn:hover {
-    padding: 5px;
-    background-color: rgb(201, 176, 176);
-    border: 2px solid rgb(139, 66, 66);
-}
-
 .btn a{
     color: rgb(139, 66, 66);
     text-transform:  uppercase;
@@ -116,9 +60,15 @@
     font-size: 12px;
 }
 
+.btn:hover {
+    padding: 5px;
+    background-color: rgb(201, 176, 176);
+    border: 2px solid rgb(139, 66, 66);
+}
+
 
 .btn1 {
-    margin-left: 140px ;
+    margin-left: 80px ;
     width: 100px;
     height: 40px;
     margin-top: 100px;
@@ -149,12 +99,31 @@
 	color: #fff;
 }
 
+
 .input-form .fas{
     position: absolute;
     top: 18px;
     left: 35px;
     font-size: 20px;
     color:#fff;
+}
+
+.about h1{
+    text-align:center;
+    font-size: 30px;
+    margin-left: 0px;
+    letter-spacing: 10px;
+    color: #e5dde9;
+}
+
+.about p{
+    text-align: center;
+    color: #e5dde9;
+    font-size: 14px;
+    margin: 25px 0;
+    margin-left: auto;
+    margin-right: 35px;
+    line-height: 22px;
 }
 
 ::-webkit-input-placeholder{
